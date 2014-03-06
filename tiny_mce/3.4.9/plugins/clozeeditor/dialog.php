@@ -28,8 +28,8 @@
 
 <form name="Formular">
   <fieldset >
-    <legend class="title">Embedded answers (CLOZE) item</legend>
-    <label for="quiz_type">Please choose a Cloze sub-question format</label><br />
+    <legend class="title">CLOZE</legend>
+    <label for="quiz_type"></label>
     <select name="quizType" onchange="toggleThrottle(); " >
             <option value="SHORTANSWER"><?php echo get_string('shortanswer', 'quiz'); ?></option>
             <option value="SHORTANSWER_C"><?php echo get_string('shortanswer', 'quiz')." (".get_string('casesensitive', 'quiz').")"; ?></option>

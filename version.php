@@ -27,7 +27,7 @@ defined('MOODLE_INTERNAL') || die();
 
 
 $plugin->version = 2014030402;
-$plugin->requires = 2011120500; 
+$plugin->requires = 2017111303; 
 $plugin->component = 'tinymce_clozeeditor';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->release = '1.0';

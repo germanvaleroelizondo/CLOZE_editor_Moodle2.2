@@ -1,18 +1,19 @@
 <?php // $Id: insert_cloze.php,v 1.4 2011/03/10
 
- require("../../../../../../../config.php");
+ require("../../../../../config.php");
 
 
     $id = optional_param('id', SITEID, PARAM_INT);
 
     require_course_login($id);
     @header('Content-Type: text/html; charset=utf-8');
+    
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<script type="text/javascript" src="../../tiny_mce_popup.js?v={tinymce_version}"></script>
+<script type="text/javascript" src="../../tiny_mce/<?php echo get_texteditor('tinymce')->version ?>/tiny_mce_popup.js?v={tinymce_version}"></script>
 	<script type="text/javascript" src="js/dialog.js?v={tinymce_version}"></script>
 	<script type="text/javascript" src="js/encode.js"></script>
   <script type="text/javascript" src="js/parse.js"></script>

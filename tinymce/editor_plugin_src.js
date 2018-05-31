@@ -25,9 +25,9 @@
 			// Register the command so that it can be invoked by using tinyMCE.activeEditor.execCommand('mceclozeeditor');
 			ed.addCommand('mceclozeeditor', function() {
 				ed.windowManager.open({
-					file : url + '/dialog.htm',
-					width : 320 + parseInt(ed.getLang('clozeeditor.delta_width', 0)),
-					height : 120 + parseInt(ed.getLang('clozeeditor.delta_height', 0)),
+					file : ed.getParam("moodle_plugin_base") + 'clozeeditor/dialog.php',
+					width : 490 + parseInt(ed.getLang('clozeeditor.delta_width', 0)),
+					height : 360 + parseInt(ed.getLang('clozeeditor.delta_height', 0)),
 					inline : 1
 				}, {
 					plugin_url : url, // Plugin absolute URL
@@ -39,7 +39,7 @@
 			ed.addButton('clozeeditor', {
 				title : 'clozeeditor.desc',
 				cmd : 'mceclozeeditor',
-				image : url + '/img/cloze_editor.png'
+				image : ed.getParam("moodle_plugin_base") + 'clozeeditor/tinymce/img/ed_cloze_editor.png'
 			});
 
 			// Add a node change handler, selects the button in the UI when a image is selected
@@ -80,5 +80,5 @@
 	});
 
 	// Register plugin
-	tinymce.PluginManager.add('clozeeditor', tinymce.plugins.clozeeditorPlugin);
+	tinymce.PluginManager.add('clozeeditor', tinymce.plugins.ClozeEditorPlugin);
 })();

@@ -17,10 +17,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Plugin for cloze question  editor.
+ * Plugin for Moodle tinymce clozeeditor.
  *
- * @package   tinymce_clozeeditor
- * @copyright 2013 Daniel Thies
+ *
+ * @package    tiny_mce
+ * @subpackage clozeeditor
+ * @copyright  2013 Andreas Glombitza/Achim Skuta
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class tinymce_clozeeditor extends editor_tinymce_plugin {
@@ -30,8 +32,8 @@ class tinymce_clozeeditor extends editor_tinymce_plugin {
     protected function update_init_params(array &$params, context $context,
             array $options = null) {
 
-        // Add button before 'nonbreaking' in advancedbuttons3.
-        $this->add_button_before($params, 3, 'clozeeditor', 'nonbreaking');
+        // Add button after 'rtl' in advancedbuttons2.
+        $this->add_button_after($params, 2, ',|,clozeeditor', 'rtl');
 
         // Add JS file, which uses default name.
         $this->add_js_plugin($params);
